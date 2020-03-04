@@ -1,0 +1,15 @@
+-- PS 2016: Query Enterprise Custom Fields with its data types
+
+SELECT CustomFieldName, 
+       EntityName, 
+       CASE
+         WHEN datatype = '9' THEN 'Cost'
+         WHEN datatype = '4' THEN 'Date'
+         WHEN datatype = '6' THEN 'Duration'
+         WHEN datatype = '17' THEN 'Flag'
+         WHEN datatype = '15' THEN 'Number'
+         WHEN datatype = '21' THEN 'Text'
+       END AS 'Data Type', 
+       CreatedDate, 
+       ModificationDate 
+FROM   pjrep.Mfn_epm_getallcustomfieldsinformation('SiteID') 
