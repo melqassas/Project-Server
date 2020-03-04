@@ -7,5 +7,6 @@
 
 - Project Server 2019
 - Project Server 2016
+- Project Server 2013
 
 Read Details at **[Project Server 2016: Query Enterprise Custom Fields with its data type](https://spgeeks.devoworx.com/project-server-2016-get-the-enterprise-custom-fields/)**
