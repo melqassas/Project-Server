@@ -1,4 +1,4 @@
-# QueryforProjectServerDB
+# Query>ProjectServerDB
 ![SQL Queries for Project Server Database](https://user-images.githubusercontent.com/49816567/75915226-298d7400-5e67-11ea-843f-35c985ae161a.png)
 
 **T-SQL Queries for Project Server Database**
