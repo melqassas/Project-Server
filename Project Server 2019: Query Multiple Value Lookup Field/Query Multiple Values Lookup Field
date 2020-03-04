@@ -1,0 +1,27 @@
+-- Project Server 2019: Query Multiple Values Lookup Field
+WITH MultipleValues_LookupField
+AS (SELECT
+  proj.ProjectUID,
+  proj.ProjectName,
+  proj.ProjectStartDate,
+  Proj.ProjectFinishDate,
+  CONVERT(nvarchar, Lookup_Table.MemberFullValue) AS 'Departments'
+FROM pjrep.MSP_EpmProject_UserView AS proj
+LEFT OUTER JOIN [pjrep].[MSPCFPRJ_Departments_AssociationView] AS Lookup_Association
+  ON proj.ProjectUID = Lookup_Association.EntityUID
+LEFT OUTER JOIN pjrep.MSP_EpmLookupTable AS Lookup_Table
+  ON Lookup_Association.LookupMemberUID = Lookup_Table.MemberUID)
+  
+  
+SELECT DISTINCT
+  Cusfields.[ProjectName],
+  Cusfields.ProjectStartDate,
+  Cusfields.ProjectFinishDate,
+  STUFF((SELECT DISTINCT
+    ', ' + MultipleValues_Field.Departments
+  FROM MultipleValues_LookupField AS MultipleValues_Field
+  WHERE Cusfields.[ProjectUID] = MultipleValues_Field.[ProjectUID]
+  FOR xml PATH (''), TYPE)
+  .value('.', 'NVARCHAR(MAX)'), 1, 2, '') [Departments]
+FROM MultipleValues_LookupField Cusfields
+ORDER BY ProjectName
