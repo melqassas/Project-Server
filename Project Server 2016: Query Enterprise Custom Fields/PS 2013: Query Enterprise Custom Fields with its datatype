@@ -1,5 +1,5 @@
 -- Query Enterprise Custom Fields with its datatypes
-USE [ProjectWebApp-Demo] 
+USE [ProjectWebApp] 
 SELECT customfieldname, 
        entityname, 
        CASE
