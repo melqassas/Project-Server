@@ -6,7 +6,7 @@
 - [Project Server 2019: Query Multiple Value Lookup Field](https://spgeeks.devoworx.com/query-multiple-values-lookup-table-field-project-server-2019/)
 - [Project Server 2016: Query Enterprise Custom Fields](https://spgeeks.devoworx.com/project-server-2016-get-the-enterprise-custom-fields/)
 - [Project Server 2019: Query Task Settings and Display](https://spgeeks.devoworx.com/project-server-2019-query-task-settings-and-display/)
-
+- [Query Task Hierarchy In Project Server 2019/2016/2013](https://spgeeks.devoworx.com/query-task-hierarchy-in-project-server-2016/)
 -------------------
 
 **Have a Question, Please ask [deBUG.to](https://deBUG.to) Community** | **[Mohamed El-Qassas](https://devoworx.com)**
